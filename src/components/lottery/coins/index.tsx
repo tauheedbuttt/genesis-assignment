@@ -40,13 +40,13 @@ const Coins = ({ amounts, currentPool }: CoinsProps) => {
                         <table className="w-full border-b-black border-b-2 ">
                             {
                                 amounts?.map((item, index) => (
-                                    <tr className="flex items-center justify-end" key={index}>
+                                    <tr className="flex" key={index}>
                                         {/* {icon} */}
                                         <td>
                                             <Image src={icons[item.coinSymbol]} alt='icon' />
                                         </td>
                                         <td className="w-full text-end">{item.poolAmount}</td>
-                                        <td className="w-[20%] ml-2 text-start">{item.coinSymbol}</td>
+                                        <td className="w-[6%] ml-2 text-start">{item.coinSymbol}</td>
                                     </tr>
                                 ))
                             }
