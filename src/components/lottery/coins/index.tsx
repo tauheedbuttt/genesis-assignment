@@ -46,7 +46,7 @@ const Coins = ({ amounts, currentPool }: CoinsProps) => {
                                             <Image src={icons[item.coinSymbol]} alt='icon' />
                                         </td>
                                         <td className="w-full text-end">{item.poolAmount}</td>
-                                        <td className="w-[6%] ml-2 text-start">{item.coinSymbol}</td>
+                                        <td className="w-[20%] ml-2 text-start">{item.coinSymbol}</td>
                                     </tr>
                                 ))
                             }
