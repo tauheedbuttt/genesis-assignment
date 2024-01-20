@@ -10,19 +10,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#10002B",
-        secondary: "#52B788",
-        accent: "#edf2f4",
-        border: "#D9DBF1",
-        dark: "#222222",
-        light: "#edf2f4",
-        danger: "#d80032",
-        edit: "#0077B6",
-        view: "#F77F00",
-        status: {
-          Approved: "#52B788",
-          Rejected: "#d80032",
-          Pending: "#edf2f4",
+        primary: {
+          COSMIC: "#961A88",
+          CLASSIC: "#191978",
+          ATOMIC: "#00AEB1",
+        },
+        secondary: {
+          COSMIC: "#EEE1F0",
+          CLASSIC: "#E9EEF6",
+          ATOMIC: "#EAF9F7",
         },
       },
       fontFamily: {

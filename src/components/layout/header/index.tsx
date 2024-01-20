@@ -6,7 +6,7 @@ const Header = () => {
             <div className=" w-[72px] h-[60px] cursor-pointer flex items-center justify-center">
                 <MdMenu className="text-2xl" />
             </div>
-            <div className="text-center w-full text-lg font-bold">
+            <div className="text-center w-full text-xl font-bold">
                 Lottery
             </div>
             <div className=" w-[72px] h-[60px] cursor-pointer flex items-center justify-center">
