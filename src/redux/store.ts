@@ -1,15 +1,21 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/dist/query";
 
+import authReducer from "./features/authSlice";
+
 import lotteryApi from "./services/lotteryApi";
+import authApi from "./services/authApi";
 
 export const store = configureStore({
   reducer: {
+    authReducer,
     [lotteryApi.reducerPath]: lotteryApi.reducer,
+    [authApi.reducerPath]: authApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({ serializableCheck: false }).concat(
-      lotteryApi.middleware
+      lotteryApi.middleware,
+      authApi.middleware
     ),
   devTools: process.env.NODE_ENV !== "production",
 });

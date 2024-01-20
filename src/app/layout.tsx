@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "../styles/globals.css";
 import { Providers } from "@/redux/provider";
 import Header from "@/components/layout/header";
+import Alert from "@/components/alert";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         <Providers>
           <Header />
           {children}
+          <Alert />
         </Providers>
       </body>
     </html>
