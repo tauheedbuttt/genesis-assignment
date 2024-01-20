@@ -2,9 +2,9 @@
 
 import { useGetLotteryQuery } from "@/redux/services/lotteryApi"
 import { MdZoomIn, MdAlarm, MdArrowDownward } from "react-icons/md";
-import { FaCaretDown } from "react-icons/fa";
 
 import { capitalFirst } from "@/utils/strings";
+import Coins from "./coins";
 
 const Lottery = ({ lotteryType }: { lotteryType: "COSMIC" | "CLASSIC" | "ATOMIC" }) => {
     const { data, isLoading } = useGetLotteryQuery({ lotteryType });
@@ -55,10 +55,7 @@ const Lottery = ({ lotteryType }: { lotteryType: "COSMIC" | "CLASSIC" | "ATOMIC"
                     </button>
                 </div>
                 {/* Show More */}
-                <div className={`flex items-center text-xs text-gray-700  gap-2 cursor-pointer py-1 justify-center`}>
-                    <FaCaretDown className="text-lg" />
-                    <span>Current Pool Status</span>
-                </div>
+                <Coins amounts={lottery?.poolAmount} currentPool={lottery?.currentPool} />
             </div>
         </>
     )
