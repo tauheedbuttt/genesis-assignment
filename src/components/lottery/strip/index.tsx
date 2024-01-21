@@ -9,7 +9,6 @@ export interface StripProps {
 
 const Strip = ({ lotteryType, nextDraw }: StripProps) => {
     const { token } = useSelector((state: any) => state.authReducer);
-    console.log('MY TOKEN', token)
     return (
         <div data-testid="strip-container" className={`flex items-center gap-3 bg-primary-${lotteryType} text-white px-4 py-1`}>
             <div className="flex flex-wrap">Next Draw</div>
