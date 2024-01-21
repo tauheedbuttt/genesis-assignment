@@ -30,5 +30,6 @@ const config: Config = {
     },
   },
   plugins: [require("tailwindcss"), require("autoprefixer")],
+  mode: "jit",
 };
 export default config;

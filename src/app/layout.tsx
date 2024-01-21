@@ -24,6 +24,10 @@ export default function RootLayout({
           <Header />
           {children}
           <Alert />
+          {/* <div className="bg-primary-CLASSIC bg-primary-COSMIC bg-primary-ATOMIC" />
+          <div className="bg-secondary-CLASSIC bg-secondary-COSMIC bg-secondary-ATOMIC" />
+          <div className="text-secondary-CLASSIC text-secondary-COSMIC text-secondary-ATOMIC" />
+          <div className="text-primary-CLASSIC text-primary-COSMIC text-primary-ATOMIC" /> */}
         </Providers>
       </body>
     </html>

@@ -12,15 +12,16 @@ const Loader = ({
   isLoading,
   children,
   size = 4,
-  color = "secondary",
+  color = "blue-900",
   className = "secondary",
 }: LoaderProps) => {
   return !isLoading ? (
     children
   ) : (
-    <div className={`w-full flex items-center justify-center  ${className}`}>
+    <div data-testid='loader-container' className={`w-full flex items-center justify-center  ${className}`}>
       <svg
         role="status"
+        data-testid='loader-svg'
         className={`inline w-${size} h-${size} text-${color} animate-spin`}
         // className={`inline w-10 h-10 text-${color} animate-spin`}
         viewBox="0 0 100 101"
