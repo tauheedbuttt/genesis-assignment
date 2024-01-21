@@ -8,7 +8,7 @@ import Alert from "@/components/alert";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Next Template",
+  title: "Tauheed Butt - Genesis Assignment",
   description: "Next.js boiler plate",
 };
 
