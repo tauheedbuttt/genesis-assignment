@@ -7,7 +7,9 @@ const lotteryApi = createApi({
   tagTypes: ["lottery"],
   endpoints: (builder) => ({
     getLottery: builder.query({
-      query: (params: { lotteryType: "COSMIC" | "CLASSIC" | "ATOMIC" }) => ({
+      query: (params: {
+        lotteryType: "COSMIC" | "CLASSIC" | "ATOMIC" | string;
+      }) => ({
         url: "/get-lottery",
         method: "GET",
         params,

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Results = ({ results, lotteryType }: { results: any[], lotteryType: string }) => {
     return (
-        <table className='my-2'>
+        <table className='my-2' data-testid="lottery-results">
             {
                 results?.map((item, index) => (
                     <tr key={index} className='text-sm'>

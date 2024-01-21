@@ -6,7 +6,7 @@ interface PotProps {
 
 const Pot = ({ balls, winningPot, lotteryType }: PotProps) => {
     return (
-        <div>
+        <div data-testid="lottery-pot">
             {/* Balls */}
             <div className='flex items-center gap-[10px] my-4'>
                 {

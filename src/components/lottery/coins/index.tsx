@@ -35,7 +35,7 @@ const Coins = ({ amounts, currentPool }: CoinsProps) => {
         <div className="px-4 pt-2 ">
             {
                 show && (
-                    <div>
+                    <div data-testid="coins-details">
                         <div className="text-xs mb-2 text-gray-700">Current Pool Status</div>
                         <table className="w-full border-b-black border-b-2 ">
                             {
@@ -61,9 +61,13 @@ const Coins = ({ amounts, currentPool }: CoinsProps) => {
                     </div>
                 )
             }
-            <div onClick={() => setShow(!show)} className={`flex items-center text-xs text-gray-700  gap-2 cursor-pointer pb-2 justify-center`}>
-                {show ? <FaCaretUp className="text-lg" /> : <FaCaretDown className="text-lg" />}
-                <span>{show ? "Close" : "Current Pool Status"}</span>
+            <div data-testid="status-action" onClick={() => setShow(!show)} className={`flex items-center text-xs text-gray-700  gap-2 cursor-pointer pb-2 justify-center`}>
+                {
+                    show
+                        ? <FaCaretUp data-testid="up-icon" className="text-lg" />
+                        : <FaCaretDown data-testid="down-icon" className="text-lg" />
+                }
+                <span data-testid="status-action-label">{show ? "Close" : "Current Pool Status"}</span>
             </div>
         </div>
     )

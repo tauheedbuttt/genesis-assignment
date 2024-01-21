@@ -11,7 +11,7 @@ import { useState } from "react";
 import Results from "./results";
 import Loader from "../loader";
 
-const Lottery = ({ lotteryType }: { lotteryType: "COSMIC" | "CLASSIC" | "ATOMIC" }) => {
+const Lottery = ({ lotteryType }: { lotteryType: "COSMIC" | "CLASSIC" | "ATOMIC" | string }) => {
 
     const { data, isLoading } = useGetLotteryQuery({ lotteryType });
 
@@ -21,17 +21,17 @@ const Lottery = ({ lotteryType }: { lotteryType: "COSMIC" | "CLASSIC" | "ATOMIC"
     const [show, setShow] = useState(false);
 
     return (
-        <div className={`bg-secondary-${lotteryType} rounded-md mb-5`}>
+        <div data-testid="lottery-container" className={`bg-secondary-${lotteryType} rounded-md mb-5`}>
             <Loader size={10} isLoading={isLoading} className="h-52" color={`primary-${lotteryType}`}>
                 {/* Details */}
                 <div className="p-3">
                     {/* Title */}
                     <div className={`flex justify-end items-center text-primary-${lotteryType}`}>
                         <div className="flex flex-1 gap-5 items-end">
-                            <span className="text-lg  font-bold">{capitalFirst(lottery?.lotteryName?.toLowerCase())}</span>
+                            <span data-testid='lottery-title' className="text-lg  font-bold">{capitalFirst(lottery?.lotteryName?.toLowerCase())}</span>
                             <span className="text-sm">{show ? `Past ${results?.length} Results` : `No. ${lottery?.roundNumber}`}</span>
                         </div>
-                        <div className="text-xl cursor-pointer" onClick={() => setShow(!show)} >
+                        <div data-testid="zoom-icon" className="text-xl cursor-pointer" onClick={() => setShow(!show)} >
                             {show ? <MdZoomOut /> : <MdZoomIn />}
                         </div>
                     </div>
