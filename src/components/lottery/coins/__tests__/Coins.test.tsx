@@ -1,4 +1,4 @@
-import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import Coins from '..';
 import userEvent from '@testing-library/user-event';
 
@@ -12,9 +12,9 @@ const coins = [
     "XRP",
 ]
 const mockProps = {
-    amounts: coins.map(item => ({ poolAmount: `${Math.random()}`, coinSymbol: item })),
-    currentPool: `${Math.random()}`
-}
+    amounts: coins.map(item => ({ poolAmount: `${Math.random().toFixed(6)}`, coinSymbol: item })),
+    currentPool: `${Math.random().toFixed(6)}`
+};
 
 describe("Coins", () => {
     describe("Render", () => {
