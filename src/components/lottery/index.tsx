@@ -6,7 +6,7 @@ import { MdZoomIn, MdZoomOut } from "react-icons/md";
 import { capitalFirst } from "@/utils/strings";
 import Coins from "./coins";
 import Strip from "./strip";
-import Pot from "./pot/Pot";
+import Pot from "./pot";
 import { useState } from "react";
 import Results from "./results";
 import Loader from "../loader";

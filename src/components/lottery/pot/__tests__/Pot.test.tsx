@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import Pot from '../Pot';
-import { PotProps } from '../Pot';
+import Pot from '..';
+import { PotProps } from '..';
 
 const mockProps: PotProps = {
     balls: [1, 2, 3, 4, 5, 6],
